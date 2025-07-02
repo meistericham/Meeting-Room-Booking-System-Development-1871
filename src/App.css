@@ -1,0 +1,189 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* React Calendar Customizations */
+.react-calendar {
+  width: 100% !important;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #f3f4f6;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: #6b7280;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6px;
+  background: none;
+  border: none;
+  text-align: center;
+  line-height: 16px;
+  font-size: 0.875em;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f3f4f6;
+}
+
+.react-calendar__tile--active {
+  background: #3b82f6;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes bounceIn {
+  0% { 
+    transform: scale(0.3); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
+  70% { 
+    transform: scale(0.9); 
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+/* Loading animations */
+.loading-spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast customizations */
+.Toastify__toast {
+  border-radius: 0.5rem;
+}
+
+.Toastify__toast--success {
+  background: #10b981;
+}
+
+.Toastify__toast--error {
+  background: #ef4444;
+}
+
+.Toastify__toast--warning {
+  background: #f59e0b;
+}
+
+.Toastify__toast--info {
+  background: #3b82f6;
+}
+
+/* Form enhancements */
+.form-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.form-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
